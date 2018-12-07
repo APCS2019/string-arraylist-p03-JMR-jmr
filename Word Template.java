@@ -14,8 +14,8 @@ public class Word{
     public static String scrambleWord(String word)
     {
         for(int i =0;i<word.length()-1;i++){
-            if((word.subString(i,i+1).equals("A"))&&(word.subString(i+2,i+3).equals("A"))){
-            retrun word.subString(i+2,i+3)+word.subString(i,i+1)+word.subString(i+3)
+            if((word.subString(i,i+1).equals("A"))&&(！word.subString(i+1,i+2).equals("A"))){
+            retrun word.subString(i+1,i+2)+word.subString(i,i+1)+word.subString(i+2)
             }
             
         }
