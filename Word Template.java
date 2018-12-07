@@ -14,7 +14,7 @@ public class Word{
     public static String scrambleWord(String word)
     {
         for(int i =0;i<word.length()-1;i++){
-            if((word.subString(i,i+1).compareTo("A")=0)&&(word.subString(i+2,i+3).compareTo("A")!=0)){
+            if((word.subString(i,i+1).equals("A"))&&(word.subString(i+2,i+3).equals("A"))){
             retrun word.subString(i+2,i+3)+word.subString(i,i+1)+word.subString(i+3)
             }
             
@@ -35,7 +35,7 @@ public class Word{
        List<String> temp = new ArrayList<String>(wordList.size());
         for(int i=0;i<wordList.size();i++){
             temp.add(i,wordList.get(i));
-            if(temp.get(i).compareTo(scrambleWord.(wordList.get(i))=0){
+            if(temp.get(i).equals(scrambleWord.(wordList.get(i))){
                 wordList.remove(i);
             }
         }
