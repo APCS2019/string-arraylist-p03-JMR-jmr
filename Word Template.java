@@ -13,7 +13,12 @@ public class Word{
      */
     public static String scrambleWord(String word)
     {
-        /* part (a) */
+        for(int i =0;i<word.length()-1;i++){
+            if((word.subString(i,i+1).equals("A"))&&(！word.subString(i+1,i+2).equals("A"))){
+            retrun word.subString(i+1,i+2)+word.subString(i,i+1)+word.subString(i+2)
+            }
+            
+        }
     }
     /** Modifies wordList by replacing each word with its scrambled
      *  version, removing any words that are unchanged as a result of scrambling.
@@ -27,7 +32,16 @@ public class Word{
      */
     public static void scrambleOrRemove(List<String> wordList){
         /* part (b) */
-
+       List<String> temp = new ArrayList<String>(wordList.size());
+        for(int i=0;i<wordList.size();i++){
+            temp.add(i,wordList.get(i));
+            if(temp.get(i).equals(scrambleWord.(wordList.get(i))){
+                wordList.remove(i);
+            }
+        }
+        
+        }
+        return wordList;
     }
 
     public static void main(String[] args)
